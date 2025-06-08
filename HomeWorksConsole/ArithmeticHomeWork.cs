@@ -2,6 +2,12 @@
 
 public static class ArithmeticHomeWork
 {
+    /// <summary>
+    /// Average of the transmitted number
+    /// </summary>
+    /// <param name="numbers"></param>
+    /// <returns></returns>
+    /// <exception cref="ArgumentException"></exception>
     public static int Average(params int[] numbers)
     {
         if (numbers == null || numbers.Length == 0)
@@ -14,6 +20,12 @@ public static class ArithmeticHomeWork
         return (int)(sum / numbers.Length);
     }
 
+    /// <summary>
+    /// Sum int numbers
+    /// </summary>
+    /// <param name="numbers"></param>
+    /// <returns></returns>
+    /// <exception cref="ArgumentException"></exception>
     public static int Sum(params int[] numbers)
     {
         if (numbers == null || numbers.Length == 0)
