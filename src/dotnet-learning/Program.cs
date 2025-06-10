@@ -1,5 +1,4 @@
-﻿using System.Buffers.Text;
-using System.Text;
+﻿using System.Text;
 
 namespace dotnet_learning
 {
@@ -9,20 +8,23 @@ namespace dotnet_learning
         {
             Console.OutputEncoding = Encoding.UTF8;
             HelloWorld.SayHello();
+            
             NumbersFormatExample.WriteLineNumber();
             StringFormatExample.StringToInt();
+            
             ArithmeticOperations.Divide(10, 10);
             ArithmeticOperations.Divide(10.0, 10); // Перегрузка, выбирается double
             ArithmeticOperations.Divide(10, 10.0); // Перегрузка, выбирается double
-<<<<<<< Updated upstream
+            
             IncrementDecrement.PostFixForEach();
             IncrementDecrement.PreFixForEach();
-=======
+            
             SwitchCase.SwitchCaseExample(1);
             SwitchCase.SwitchCaseExample();
             // Ввести TAB для проверки что падает исключение
             SwitchCase.SwitchCaseTryCatchExample(Console.ReadKey().Key);
->>>>>>> Stashed changes
+            
+            ForCycle.ForExample();
         }
     }
 }
