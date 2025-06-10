@@ -14,8 +14,15 @@ namespace dotnet_learning
             ArithmeticOperations.Divide(10, 10);
             ArithmeticOperations.Divide(10.0, 10); // Перегрузка, выбирается double
             ArithmeticOperations.Divide(10, 10.0); // Перегрузка, выбирается double
+<<<<<<< Updated upstream
             IncrementDecrement.PostFixForEach();
             IncrementDecrement.PreFixForEach();
+=======
+            SwitchCase.SwitchCaseExample(1);
+            SwitchCase.SwitchCaseExample();
+            // Ввести TAB для проверки что падает исключение
+            SwitchCase.SwitchCaseTryCatchExample(Console.ReadKey().Key);
+>>>>>>> Stashed changes
         }
     }
 }
