@@ -21,10 +21,14 @@ namespace dotnet_learning
             
             SwitchCase.SwitchCaseExample(1);
             SwitchCase.SwitchCaseExample();
-            // Ввести TAB для проверки что падает исключение
+            // Ввести TAB для проверки, что падает исключение
+            Console.WriteLine("Нажми <TAB> для проверки");
             SwitchCase.SwitchCaseTryCatchExample(Console.ReadKey().Key);
             
             ForCycle.ForExample();
+            
+            ArraysExample.ArrayExample();
+            ArraysExample.ArrayExample2();
         }
     }
 }
