@@ -34,6 +34,10 @@ namespace dotnet_learning
             RangesExample.RangeExample();
             
             MultiArray.TwoDimensionalArray();
+            Console.WriteLine();
+            MultiArray.JaggedArray();
+            Console.WriteLine();
+            MultiArray.ThreeDimensionalArray();
         }
     }
 }
