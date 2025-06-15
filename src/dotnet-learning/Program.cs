@@ -28,7 +28,12 @@ namespace dotnet_learning
             ForCycle.ForExample();
             
             ArraysExample.ArrayExample();
+            // LINQ to arrays Example
             ArraysExample.ArrayExample2();
+            
+            RangesExample.RangeExample();
+            
+            MultiArray.TwoDimensionalArray();
         }
     }
 }
