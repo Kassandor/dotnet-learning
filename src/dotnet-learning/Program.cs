@@ -38,6 +38,14 @@ namespace dotnet_learning
             MultiArray.JaggedArray();
             Console.WriteLine();
             MultiArray.ThreeDimensionalArray();
+            
+            var a = 10;
+            RefVarsExample.RefExample(ref a, 15);
+            
+            InExample.Example(10);
+            
+            // Пример бесконечной рекурсии, которая в итоге переполнит стек
+            // RecurseExample.Example();
         }
     }
 }
