@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using ExtensionsLibrary;
 
 namespace dotnet_learning
 {
@@ -74,6 +75,10 @@ namespace dotnet_learning
             // Статический конструктор
             var dbRepository = new DbRepository();
             dbRepository.GetData();
+            
+            // Extension класс ExtensionsExample действует на все объекты типа DateTime
+            Console.WriteLine();
+            DateTime.Now.WriteDateTime();
         }
     }
 }
