@@ -79,6 +79,14 @@ namespace dotnet_learning
             // Extension класс ExtensionsExample действует на все объекты типа DateTime
             Console.WriteLine();
             DateTime.Now.WriteDateTime();
+            
+            Console.WriteLine();
+            var partialExample = new PartialExamples("alex", "alex");
+            partialExample.PrintFullName();
+            
+            // Пример наследования
+            Console.WriteLine();
+            var point3d = new Point3D("Тестовый месседж");
         }
     }
 }
