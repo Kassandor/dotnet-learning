@@ -109,6 +109,17 @@ namespace dotnet_learning
             firstInterfaceInstance.Action();
             ISecondInterface secondInterfaceInstance = new ExplicityInterfaceExample();
             secondInterfaceInstance.Action();
+            
+            Console.WriteLine();
+            // Пример упаковки
+            // p будет упакован в тип интерфейса, потому что интерфейсы - ссылочные типы
+            IPrintable p = new Point();
+            p.Print();
+            
+            // В данном случае, упаковки не будет
+            var p2 = new Point();
+            // А тут все зависит от реализации Print()
+            p2.Print();
         }
     }
 }
