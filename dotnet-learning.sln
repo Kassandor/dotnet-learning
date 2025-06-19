@@ -8,11 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeWorksConsole", "src\Hom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionsLibrary", "src\ExtensionsLibrary\ExtensionsLibrary.csproj", "{A5CF69CD-DA65-41FE-A3DC-49CB8E8B3E40}"
 EndProject
-<<<<<<< Updated upstream
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinForms", "src\WinForms\WinForms.csproj", "{E8D2364C-2E69-42CD-81DB-4407826A67FD}"
-=======
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatternsExample", "src\PatternsExample\PatternsExample.csproj", "{9240C793-D159-4375-86B9-0A1B2C3BC527}"
->>>>>>> Stashed changes
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,26 +29,22 @@ Global
 		{A5CF69CD-DA65-41FE-A3DC-49CB8E8B3E40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5CF69CD-DA65-41FE-A3DC-49CB8E8B3E40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5CF69CD-DA65-41FE-A3DC-49CB8E8B3E40}.Release|Any CPU.Build.0 = Release|Any CPU
-<<<<<<< Updated upstream
+
 		{E8D2364C-2E69-42CD-81DB-4407826A67FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E8D2364C-2E69-42CD-81DB-4407826A67FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8D2364C-2E69-42CD-81DB-4407826A67FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8D2364C-2E69-42CD-81DB-4407826A67FD}.Release|Any CPU.Build.0 = Release|Any CPU
-=======
+
 		{9240C793-D159-4375-86B9-0A1B2C3BC527}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9240C793-D159-4375-86B9-0A1B2C3BC527}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9240C793-D159-4375-86B9-0A1B2C3BC527}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9240C793-D159-4375-86B9-0A1B2C3BC527}.Release|Any CPU.Build.0 = Release|Any CPU
->>>>>>> Stashed changes
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1276A414-9D03-4901-9DA8-200258FA31FD} = {4F63DAAC-7808-43E8-BEF3-6BA0C6B95D02}
 		{87C7BCED-C41E-4D22-AFFE-1CF6BEE09575} = {4F63DAAC-7808-43E8-BEF3-6BA0C6B95D02}
 		{A5CF69CD-DA65-41FE-A3DC-49CB8E8B3E40} = {4F63DAAC-7808-43E8-BEF3-6BA0C6B95D02}
-<<<<<<< Updated upstream
 		{E8D2364C-2E69-42CD-81DB-4407826A67FD} = {4F63DAAC-7808-43E8-BEF3-6BA0C6B95D02}
-=======
 		{9240C793-D159-4375-86B9-0A1B2C3BC527} = {4F63DAAC-7808-43E8-BEF3-6BA0C6B95D02}
->>>>>>> Stashed changes
 	EndGlobalSection
 EndGlobal

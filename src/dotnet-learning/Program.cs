@@ -29,29 +29,29 @@ namespace dotnet_learning
             // Ввести TAB для проверки, что падает исключение
             Console.WriteLine("Нажми <TAB> для проверки");
             SwitchCase.SwitchCaseTryCatchExample(Console.ReadKey().Key);
-            
+
             Console.WriteLine();
             ForCycle.ForExample();
-            
+
             Console.WriteLine();
             ArraysExample.ArrayExample();
             // LINQ to arrays Example
             ArraysExample.ArrayExample2();
-            
+
             Console.WriteLine();
             RangesExample.RangeExample();
-            
+
             Console.WriteLine();
             MultiArray.TwoDimensionalArray();
             Console.WriteLine();
             MultiArray.JaggedArray();
             Console.WriteLine();
             MultiArray.ThreeDimensionalArray();
-            
+
             Console.WriteLine();
             var a = 10;
             RefVarsExample.RefExample(ref a, 15);
-            
+
             Console.WriteLine();
             InExample.Example(10);
 
@@ -61,7 +61,7 @@ namespace dotnet_learning
             // Ядерный Ганди
             ArithmeticOverflowExample.Example();
             ArithmeticOverflowExample.Example2();
-            
+
             Console.WriteLine();
             EnumExample.Example();
 
@@ -75,18 +75,40 @@ namespace dotnet_learning
             // Статический конструктор
             var dbRepository = new DbRepository();
             dbRepository.GetData();
-            
+
             // Extension класс ExtensionsExample действует на все объекты типа DateTime
             Console.WriteLine();
             DateTime.Now.WriteDateTime();
-            
+
             Console.WriteLine();
             var partialExample = new PartialExamples("alex", "alex");
             partialExample.PrintFullName();
-            
+
             // Пример наследования
             Console.WriteLine();
             var point3d = new Point3D("Тестовый месседж");
+
+            // Пример абстрактного класса и метода
+            Console.WriteLine();
+            var weaponGun = new WeaponGun();
+            Player.Fire(weaponGun);
+            Player.CheckInfo(weaponGun);
+
+            // Пример реализации интерфейсов
+            Console.WriteLine();
+            var dataProcessor = new ConsoleDataProcessor();
+            foreach (var provider in new IDataProvider[]
+                         { new DbDataProvider(), new ApiDataProvider(), new FileDataProvider() })
+            {
+                dataProcessor.ProcessData(provider);
+            }
+            
+            // Пример явной реализации интерфейсов
+            Console.WriteLine();
+            IFirstInterface firstInterfaceInstance = new ExplicityInterfaceExample();
+            firstInterfaceInstance.Action();
+            ISecondInterface secondInterfaceInstance = new ExplicityInterfaceExample();
+            secondInterfaceInstance.Action();
         }
     }
 }
