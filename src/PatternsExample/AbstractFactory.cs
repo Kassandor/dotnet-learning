@@ -72,7 +72,7 @@ public class ColoredShape(IShape shape, IColor color)
 
 #endregion
 
-// Реализации главной фабрики и ее 
+// Реализации главной фабрики и ее компонентов 
 
 #region ConcreteFactory
 

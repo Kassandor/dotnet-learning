@@ -120,6 +120,23 @@ namespace dotnet_learning
             var p2 = new Point();
             // А тут все зависит от реализации Print()
             p2.Print();
+            
+            // Пример обобщений (Generic)
+            Console.WriteLine();
+            var aExmp = 10;
+            var bExmp = 15;
+            // Работа с перегрузкой, под каждый тип придется писать два отдельных метода - не очень удобно
+            WithoutGenericExample.Swap(ref aExmp, ref bExmp);
+            // Работа с обобщенным типом данных
+            GenericExample.Swap(ref aExmp, ref bExmp);
+            // Пример простой реализации обобщенного массива
+            var myList = new GenericExampleList<string>();
+            myList.Add("string");
+            Console.WriteLine(myList[0]);
+            
+            Console.WriteLine();
+            // Пример IEnumerable
+            InterfaceEnumerableExample.ForEach();
         }
     }
 }
