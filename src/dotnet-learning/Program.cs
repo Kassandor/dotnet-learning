@@ -102,25 +102,25 @@ namespace dotnet_learning
             {
                 dataProcessor.ProcessData(provider);
             }
-            
+
             // Пример явной реализации интерфейсов
             Console.WriteLine();
             IFirstInterface firstInterfaceInstance = new ExplicityInterfaceExample();
             firstInterfaceInstance.Action();
             ISecondInterface secondInterfaceInstance = new ExplicityInterfaceExample();
             secondInterfaceInstance.Action();
-            
+
             Console.WriteLine();
             // Пример упаковки
             // p будет упакован в тип интерфейса, потому что интерфейсы - ссылочные типы
             IPrintable p = new Point();
             p.Print();
-            
+
             // В данном случае, упаковки не будет
             var p2 = new Point();
             // А тут все зависит от реализации Print()
             p2.Print();
-            
+
             // Пример обобщений (Generic)
             Console.WriteLine();
             var aExmp = 10;
@@ -133,10 +133,75 @@ namespace dotnet_learning
             var myList = new GenericExampleList<string>();
             myList.Add("string");
             Console.WriteLine(myList[0]);
+
+            Console.WriteLine();
+            // Пример IEnumerable и yield return
+            InterfaceEnumerableExample.ForEach();
+
+            Console.WriteLine();
+            // Пример yield break
+            var enumerable = YieldBreakExample.Example1();
+            foreach (var number in enumerable)
+            {
+                Console.WriteLine(number);
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Example2");
+            // Пример с массивом int[]
+            YieldBreakExample.Example2();
+
+            Console.WriteLine();
+            // Пример делегатов
+            var mathOperation = DelegatesExample.Sum;
+            mathOperation += DelegatesExample.Multiply;
+            var result = mathOperation(10, 10);
+            Console.WriteLine(result);
+
+            // Через инкапсуляцию
+            DelegatesExample.PerformMathOperation(mathOperation, 10, 10);
+
+            // Через собственный делегат
+            ExampleDelegate operation = DelegatesExample.Sum;
+            operation += DelegatesExample.Multiply;
+            var operationResult = operation(10, 10);
+            DelegatesExample.PerformMathOperation(operation, 10, 10);
+            Console.WriteLine(operationResult);
+
+            Console.WriteLine();
+            // С использованием LINQ с передачей метода в делегат
+            var exnumsList = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
+            var linqResult = exnumsList.Where(predicate: DelegatesExample.IsEven);
+            foreach (var number in linqResult)
+            {
+                Console.WriteLine(number);
+            }
+
+            // Через передачу лямбда-функции в делегат
+            var linqResult2 = exnumsList.Where(number => number % 2 == 0);
+            Console.WriteLine(linqResult2);
+            Console.WriteLine();
+
+            //Мультикаст делегаты
+            MulticastDelegatesExample.Notify notify = MulticastDelegatesExample.SendSms;
+            notify += MulticastDelegatesExample.SendEmail;
+            notify("Hello World!");
+            
+            // Стандартный делегат Action
+            var notify2 = MulticastDelegatesExample.SendEmail;
+            notify += MulticastDelegatesExample.SendEmail;
+            notify("Hello World!");
             
             Console.WriteLine();
-            // Пример IEnumerable
-            InterfaceEnumerableExample.ForEach();
+            // Delegate + Event, паттерн Observer
+            var publisher = new MessagePublisher();
+            
+            publisher.OnNotify += SmsSubscriber.ReceiveSms;
+            publisher.OnNotify += EmailSubscriber.ReceiveEmail;
+            publisher.RaiseEvent("Hello World!");
+            Console.WriteLine("publisher.OnNotify -= SmsSubscriber.ReceiveSms;");
+            publisher.OnNotify -= SmsSubscriber.ReceiveSms;
+            publisher.RaiseEvent("Hello World!");
         }
     }
 }
