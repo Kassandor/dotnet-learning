@@ -14,7 +14,11 @@ namespace HomeWorksConsole
             Console.WriteLine(ArithmeticHomeWork.CurrencyConversion(250));
             Console.WriteLine($"Число десять: {10.IsEven()}, а число девять: {9.IsEven()}");
             
+            Console.WriteLine();
             NestedForCycles.WriteTriangle();
+            
+            Console.WriteLine();
+            ReversePrintArray.Example();
         }
     }
 }
