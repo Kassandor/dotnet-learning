@@ -19,6 +19,21 @@ namespace HomeWorksConsole
             
             Console.WriteLine();
             ReversePrintArray.Example();
+            
+            Console.WriteLine();
+            FindIndexInArray.Example();
+            
+            Console.WriteLine();
+            ResizeArrayExample.Example(20);
+            
+            Console.WriteLine();
+            AddElemInArray.Example(101);
+            
+            Console.WriteLine();
+            RemoveElemInArrayExample.Example(9);
+            
+            Console.WriteLine();
+            RecursiveSumDigitsInNumberExample.Example(561);
         }
     }
 }
